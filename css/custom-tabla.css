@@ -1,0 +1,23 @@
+
+thead {
+    color: #febe10;
+    text-align: center;
+    vertical-align: inherit;
+}
+
+.table thead th {
+    vertical-align: middle;
+}
+
+th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+tbody {
+    color: #ffffff;
+}
+
+td {
+    text-align: center;
+}

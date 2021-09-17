@@ -1,0 +1,66 @@
+// Uploads files
+    $msg = "";
+    $uploadOk = 1;
+    // If upload button is clicked ...
+    if (isset($_POST['submit'])) {
+        $filename = $_FILES["file"]["name"];
+        $tempname = $_FILES["file"]["tmp_name"];
+        $folder = "../uploads/".$filename;
+        //condicion de tamaño del archivo
+        $size = $_FILES["file"]["size"];
+        define('MB', 1048576);
+        echo $size;
+        if ($size > 4*MB){
+            $msg = "El archivo tiene que ser menor a 5MB";
+            echo $msg;
+            echo '<script>
+                    Swal.fire({
+                        type: "Error",
+                        title: "Error al subir archivo",
+                        text: "El tamaño del archivo es superior a 5MB"
+                    });
+                </script>';
+        } else{
+            $sql = "INSERT INTO odts (idOdt, marca, proyecto, cliente, areasAgregadas, responsablesAreas,
+                objetivo, dummy, artesEzqualo, artesSeparados, fechaSolicitud, fechaEntrega,
+                otra, digital, impreso, granFormato, medidas, acabados, archivo) VALUES ('$id_odt',
+                '$marca', '$nom_proyecto', '$cliente_odt', '$areas', '$personas', '$objetivo', '$dummy',
+                '$artes_ezqualo', '$artes_separados', '$fecha_solicitud','$fecha_entrega', '$otra', '$digital',
+                '$impreso', '$formato', '$medidas', '$acabados', '$filename')";
+
+            //$sql = "INSERT INTO odts (archivo) VALUES ('$filename')";
+            // Execute query
+            if ($conn->query($sql) === TRUE) {
+                $msg = "Image uploaded successfully";
+                //echo $msg;
+                echo '<script>
+                    Swal.fire({
+                        type: "success",
+                        title: "Datos correctos",
+                        text: "Odt registrada correctamente!"
+                    });
+                </script>';
+            } else{
+                $msg = "Failed to upload image";
+                //echo $msg;
+                echo '<script>
+                    Swal.fire({
+                        type: "Error",
+                        title: "Datos incompletos",
+                        text: "Rellene todos los campos!"
+                    });
+                </script>';
+            }
+            //mysqli_query($db, $sql)S
+        }
+    }
+    
+    
+    
+    
+    <?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>
+    
+    
+    
+    
+    

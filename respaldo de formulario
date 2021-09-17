@@ -1,0 +1,420 @@
+
+	<!-- Formulario odt -->
+	<div class="container-fluid" align="center">
+		<div class="spacer">
+				<div class="container container_main">
+					<h1>ODTS</h1>
+
+                        <div class="row" id="form-center">
+                            <div class="forms-odt" >
+                                <span style="color: yellow;">◥ </span><label id="nom-campo">ID ODT</label>
+                                <input style="height:50px; height: 40px;" type="text" class="form-control" id="id_odt" name="id_odt" readonly>
+                            </div>
+                            <form class="forms-odt" id="formB" action="#" method="POST">>
+                                <span style="color: yellow;">◥ </span><label id="nom-campo">Marca</label>
+                                <!-- <input style="height:50px; height: 40px;" type="text" class="form-control" name="marca" id="marca" value="" onchange="evaluarContenido(this.value)">-->
+                                <select class="form-control" style="height:60px; height: 40px;" name="marca" id="marca" value="" onchange="evaluarContenido(this.value)">
+                                    <?php
+                                        include('../modulos/select_marca_odt.php');
+                                    ?>
+                                    <option value="0" disabled selected>--Seleccionar--</option>
+                                </select>
+                                </select>
+                            </form>
+                            <form class="forms-odt" id="formC" action="#" method="POST">>
+                                <span style="color: yellow;">◥ </span><label id="nom-campo">Proyecto</label>
+                                <input style="height:50px; height: 40px;" type="text" class="form-control" name="nom_proyecto">
+                            </form>
+                            <form class="forms-odt" id="formD" action="#" method="POST">>
+                                <span style="color: yellow;">◥ </span><label id="nom-campo">Cliente</label>
+                                <select class="form-control" style="height:60px; height: 40px;" name="cliente_odt">
+                                    <?php
+                                        include('../modulos/select_clientes_odt.php');
+                                    ?>
+                                    <option value="0" disabled selected>--Seleccionar--</option>
+                                </select>
+                            </form>
+                            <form class="forms-odt field_wrapper" id="formE" action="#" method="POST">>
+                                <span style="color: yellow;">◥ </span><label id="nom-campo">Áreas</label>
+                                <select name="areas" id="areas" class="form-control" style="height:60px; height: 40px;">
+                                    <option value="" hidden>--Seleccionar--</option>
+                                </select>
+                            </form>
+                            <form class="forms-odt field_wrapper2" id="formF" action="#" method="POST">>
+                                <span style="color: yellow;">◥ </span><label id="nom-campo">Persona Asignada</label>
+                                <select class="form-control" style="height:60px; height: 40px;" name="personas" id="personas">
+                                    <option value="" hidden>--Seleccionar--</option>
+                                </select>
+                            </form>
+                            <div class="field_wrapper3">
+                                <a onclick="clonar()" class="add_button" title="Add field" id="addselect"><img style="color: yellow;"/></a>
+                            </div>
+                        </div>
+                        <div >
+                            <form class="textarea-odt" id="formG" action="#" method="POST">
+                                <span style="color: yellow;">◥ </span><label id="nom-campo">Objetivo</label>
+                                <textarea rows="6" type="text" class="form-control"> </textarea>
+                            </form>
+                        </div>
+
+                        <p><h1>Formato de entrega para revisión</h1></p>
+                        <div class="row" id="form-center">
+                            <form class="forms-odt" id="formH" action="#" method="POST">
+                                <span style="color: yellow;">◥ </span><label id="nom-campo">Dummy</label>
+                                <select name="" id="pet-select" class="form-control" style="height:60px; height: 40px;" >
+                                    <option value="">--Seleccionar--</option>
+                                    <option value="">Si</option>
+                                    <option value="">No</option>
+                                </select>
+                            </form>
+                            <form class="forms-odt" id="formI" action="#" method="POST">
+                                <span style="color: yellow;">◥ </span><label id="nom-campo">Artes en presentación Ezqualo</label>
+                                <select name="" id="pet-select" class="form-control" style="height:60px; height: 40px;" >
+                                    <option value="">--Seleccionar--</option>
+                                    <option value="">Si</option>
+                                    <option value="">No</option>
+                                </select>
+                            </form>
+                            <form class="forms-odt" id="formJ" action="#" method="POST">
+                                <span style="color: yellow;">◥ </span><label id="nom-campo">Artes Separados</label>
+                                <select name="" id="pet-select" class="form-control" style="height:60px; height: 40px;">
+                                    <option value="">--Seleccionar--</option>
+                                    <option value="">Si</option>
+                                    <option value="">No</option>
+                                </select>
+                            </form>
+                            <form class="forms-odt" id="formK" action="#" method="POST">
+                                <span style="color: yellow;">◥ </span><label id="nom-campo">Fecha de Solicitud</label>
+                                <input class="form-control" type="date" id="start" name="trip-start" value="dd-mm-yyyy" min="01-01-2015" max="31-12-2030">
+                            </form>
+                            <form class="forms-odt" id="formL" action="#" method="POST">
+                                <span style="color: yellow;">◥ </span><label id="nom-campo">Fecha de Entrega</label>
+                                <input class="form-control" type="date" id="start" name="trip-start" value="dd-mm-yyyy" min="01-01-2015" max="31-12-2030">
+                            </form>
+                        </div>
+
+                        <div class="row" id="form-center">
+                            <form class="textarea-odt" id="formM" action="#" method="POST">
+                                <span style="color: yellow;">◥ </span><label id="nom-campo">Otra</label>
+                                <textarea rows="6" type="text" class="form-control"> </textarea>
+                            </form>
+                        </div>
+
+                        <p><h1>Formato de entrega salida</h1></p>
+                        <div class="row" id="form-center">
+                            <form class="forms-odt" id="formN" action="#" method="POST">
+                                <span style="color: yellow;">◥ </span><label id="nom-campo">Digital</label>
+                                <select name="" id="pet-select" class="form-control" style="height:60px; height: 40px;">
+                                    <option value="">--Seleccionar--</option>
+                                    <option value="">Si</option>
+                                    <option value="">No</option>
+                                </select>
+                            </form>
+                            <form class="forms-odt" id="formO" action="#" method="POST">
+                                <span style="color: yellow;">◥ </span><label id="nom-campo">Impreso</label>
+                                <select name="" id="pet-select" class="form-control" style="height:60px; height: 40px;">
+                                    <option value="">--Seleccionar--</option>
+                                    <option value="">Si</option>
+                                    <option value="">No</option>
+                                </select>
+                            </form>
+                            <form class="forms-odt" id="formP" action="#" method="POST">
+                                <span style="color: yellow;">◥ </span><label id="nom-campo">Gran Formato</label>
+                                <select name="" id="pet-select" class="form-control" style="height:60px; height: 40px;">
+                                    <option value="">--Seleccionar--</option>
+                                    <option value="">Si</option>
+                                    <option value="">No</option>
+                                </select>
+                            </form>
+                            <form class="forms-odt" id="formQ" action="#" method="POST">
+                                <span style="color: yellow;">◥ </span><label id="nom-campo">Medidas</label>
+                                <input style="height:60px; height: 40px;" type="text" class="form-control">
+                            </form>
+                        </div>
+
+                        <div class="row" id="form-center">
+                            <form class="textarea-odt" id="formR" action="#" method="POST">
+                                <span style="color: yellow;">◥ </span><label id="nom-campo">Acabados</label>
+                                <textarea rows="6" type="text" class="form-control"> </textarea>
+                            </form>
+                        </div>
+                        <!--<script>
+                            $(document).ready(function() {
+                                $('#generate').click(function() {
+                                    var values = [];
+                                    var areas_a_select = ['Administración', 'Arte', 'Compras', 'Copy y Corrección de estilo', 'Estrategia', 'Post Producción', 'Producción', 'Programación'];
+                                    var areas_a_select2 = [];
+
+
+                                    var span = $('<span>').prop('style','color: yellow;');
+                                    var label = $('<label>') .prop('id','nom-campo');
+
+                                    var select = $('<select>').prop('id', 'areas')
+                                        .prop('name', 'areas')
+                                        .prop('class','form-control')
+                                        .prop('style','height:60px; height: 40px;');
+
+                                    var select2 = $('<select>').prop('id', 'areas2')
+                                        .prop('name', 'areas2')
+                                        .prop('class','form-control')
+                                        .prop('style','height:60px; height: 40px;');
+
+                                    $(areas_a_select).each(function() {
+                                        select.append($("<option>")
+                                            .prop('value', this)
+                                            .text(this.charAt(0).toUpperCase() + this.slice(1)));
+                                    });
+
+                                    $(areas_a_select).each(function() {
+                                        select2.append($("<option>")
+                                            .prop('value', this)
+                                            .text(this.charAt(0).toUpperCase() + this.slice(1)));
+                                    });
+
+                                    $('#container').append(span).append(label).append(select);
+                                    $('#container2').append(span).append(label).append(select2);
+                                })
+                            });
+                        </script>-->
+
+                        <!-- Subir archivos -->
+                        <div class="row text-center" style="padding-top: 10px;">
+                            <div class="col-lg-12">
+                                <form action="../controlador/upload.php" method="POST" enctype="multipart/form-data">
+                                    <h1>Subir Archivo</h1>
+                                    <input type="file" id="archivo" hidden="hidden">
+                                    <button type="button" id="custom-button">Seleccionar archivo</button>
+                                    <span id="custom-text">No ha seleccionado el archivo</span>
+                                    <p class="center" style="padding-top: 10px;"><input type="submit" value="Subir archivo"></p>
+                                </form>
+                            </div>
+                        </div>
+
+                    <!-- Subir archivos -->
+					<div class="btnodt-save">
+                        <!--<form class="forms-odt">-->
+                            <input class="btnodt-guardar" type="submit" value="GUARDAR" id="submit">
+                        <!--</form>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+<!--<script>
+                            $(document).ready(function() {
+                                $('#generate').click(function() {
+                                    var values = [];
+                                    var areas_a_select = ['Administración', 'Arte', 'Compras', 'Copy y Corrección de estilo', 'Estrategia', 'Post Producción', 'Producción', 'Programación'];
+                                    var areas_a_select2 = [];
+
+
+                                    var span = $('<span>').prop('style','color: yellow;');
+                                    var label = $('<label>') .prop('id','nom-campo');
+
+                                    var select = $('<select>').prop('id', 'areas')
+                                        .prop('name', 'areas')
+                                        .prop('class','form-control')
+                                        .prop('style','height:60px; height: 40px;');
+
+                                    var select2 = $('<select>').prop('id', 'areas2')
+                                        .prop('name', 'areas2')
+                                        .prop('class','form-control')
+                                        .prop('style','height:60px; height: 40px;');
+
+                                    $(areas_a_select).each(function() {
+                                        select.append($("<option>")
+                                            .prop('value', this)
+                                            .text(this.charAt(0).toUpperCase() + this.slice(1)));
+                                    });
+
+                                    $(areas_a_select).each(function() {
+                                        select2.append($("<option>")
+                                            .prop('value', this)
+                                            .text(this.charAt(0).toUpperCase() + this.slice(1)));
+                                    });
+
+                                    $('#container').append(span).append(label).append(select);
+                                    $('#container2').append(span).append(label).append(select2);
+                                })
+                            });
+                        </script>-->
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        var fieldHTML = '<div><span style="color: yellow;"> </span><label id="nom-campo"></label><select name="areas" id="areas" class="form-control" style="height:60px; height: 40px;"><option value="" hidden>--Seleccionar--</option></select></div>'
+		var fieldHTML2 = '<div><span style="color: yellow;"> </span><label id="nom-campo"></label><select class="form-control" style="height:60px; height: 40px;" name="personas" id="personas"><option value="" hidden>--Seleccionar--</option></select></div>'
+		var x = 1; //Initial field counter is 1
+		
+		
+		
+		
+		
+var selectedValue = document.getElementById("list").value;
+			<?php
+			$var_PHP = "<script> document.writeln(selectedValue); </script>"; // igualar el valor de la variable JavaScript a PHP 
+			$consult = $mysqli -> query("SELECT DISTINCT empresa FROM nomenclaturas WHERE usuario like '%$userlogin%' AND empresa = '$var_PHP'");
+			while ($valores = mysqli_fetch_array($consult)) {
+				$empresa = $valores[empresa];
+			?>
+			
+			
+			
+			
+			
+<?php
+								$mysqli = new mysqli('localhost:3306', 'root', 'password', 'db_follower');
+									//$mysqli = mysqli_connect('localhost', 'dbadmin_ezqualo', '3zqu4l0++', 'db_follower');
+								$query = $mysqli -> query("SELECT DISTINCT nombre FROM equipoArte");
+
+								while ($valores = mysqli_fetch_array($query)) {
+								    // En esta sección estamos llenando el select con datos extraidos de una base de datos.
+								    $valoresphp[] = $valores[nombre];
+								}
+						    	?>
+
+							<script type="text/javascript">
+								var areas_a_select = ['Administración', 'Arte', 'Compras', 'Copy y Corrección de estilo', 'Estrategia', 'Post Producción', 'Producción', 'Programación'];
+								var option = '';
+
+								for (var i = 0; i < areas_a_select.length; i++){
+								option += '<option value="'+ areas_a_select[i] + '">' + areas_a_select[i] + '</option>';
+								}
+								$('#areas').append(option);
+
+								var valores_php = <?php echo json_encode($valoresphp);?>;
+								var list_personas = {
+									'Arte': valores_php,
+									'Compras': []
+								}
+
+								var $list_personas = $('#personas');
+								$('#areas').change(function () {
+									var areas = $(this).val(), persona = list_personas[areas] || [];
+
+									var html = $.map(persona, function(t){
+										return '<option value="' + t + '">' + t + '</option>'
+									}).join('');
+									$list_personas.html(html)
+								});
+							</script>
+							
+							
+							
+							
+<?php
+	include('../modulos/select_clientes_odt.php');
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+//execute your query
+    $servername = "localhost";
+    $username = "root";
+    $password = "password";
+    $dbname = "db_follower";
+
+    // Create connection
+    $conn = new mysqli($servername,
+        $username, $password, $dbname);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: "
+            . $conn->connect_error);
+    }
+
+    $id_odt = $_POST['id_odt'];
+    $marca = $_POST['marca'];
+    $nom_proyecto = $_POST['nom_proyecto'];
+    $cliente_odt = $_POST['cliente_odt'];
+    $areas = $_POST['areas'];
+    $personas = $_POST['personas'];
+    $objetivo = $_POST['objetivo'];
+    $dummy = $_POST['dummy'];
+    $artes_ezqualo = $_POST['artes_ezqualo'];
+    $artes_separados = $_POST['artes_separados'];
+    $fecha_solicitud = $_POST['fecha_solicitud'];
+    $fecha_entrega = $_POST['fecha_entrega'];
+    $otra = $_POST['otra'];
+    $digital = $_POST['digital'];
+    $impreso = $_POST['impreso'];
+    $formato = $_POST['formato'];
+    $medidas = $_POST['medidas'];
+    $acabados = $_POST['acabados'];
+    $archivo = 2;
+
+    $sql = "INSERT INTO odts (idOdt, marca, proyecto, cliente, areasAgregadas, responsablesAreas, 
+            objetivo, dummy, artesEzqualo, artesSeparados, fechaSolicitud, fechaEntrega, 
+            otra, digital, impreso, granFormato, medidas, acabados, archivo) VALUES ('$id_odt',
+            '$marca', '$nom_proyecto', '$cliente_odt', '$areas', '$personas', '$objetivo', '$dummy', 
+            '$artes_ezqualo', '$artes_separados', '$fecha_solicitud','$fecha_entrega', '$otra', '$digital',
+            '$impreso', '$formato', '$medidas', '$acabados','$archivo')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "record inserted successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }*/
+    

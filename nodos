@@ -1,0 +1,76 @@
+//$con=mysqli_connect('localhost','dbadmin_ezqualo','3zqu4l0++','db_follower');
+            $con=mysqli_connect('localhost','root','password','db_follower');
+            $sql=$mysqli -> query("SELECT idOdt, proyecto, fechaSolicitud, fechaEntrega FROM odts");
+            $sql_piezas=$mysqli -> query("SELECT id, nombre, caracteristicas, medidas, fechaInicio, fechaSalida FROM piezas");
+            $sql_caracteristicas = $mysqli -> query("SELECT id, nombre, caracteristicas, medidas, fechaInicio, fechaSalida FROM piezas WHERE id = '1'");
+            //$resultado=mysqli_query($con,$sql);
+            $num_projects = mysqli_num_rows($sql);
+            $contador = 1;
+            $contador2 = 2;
+            $contador3 = 1;
+
+            while($columnas=mysqli_fetch_array($sql)){
+                echo '<tr class="treegrid-'.$contador.'" style="font-weight: 800;">';
+                echo "<td>$columnas[proyecto]</td>";
+                echo '<td><a href="#exampleModal" data-toggle="modal"><ion-icon name="add-circle-outline" size="large" style="color: #febe10;"></ion-icon></a></td>';
+                echo "<td>$columnas[fechaSolicitud]</td>";
+                echo "<td>$columnas[fechaEntrega]</td>";
+                echo '<td><a href="#"></a></td>';
+                echo "<td>Comentarios</td>";
+                echo '<td><svg id="" width="100px" height="30px"><rect id="semaforo_colors" class="rect_colors" x="5" y="5" width="150" height="350" stroke="white" stroke-width="2"/></svg></td>';
+                echo "</tr>";
+
+                while($piezas=mysqli_fetch_array($sql_piezas)){
+                   // if($contador2 == 2){
+                        //echo '<tr class="treegrid-'.$contador2.' treegrid-parent-'.$contador3.'"><td>Node 1-1</td><td>Additional info</td></tr>';
+                    echo '<tr class="treegrid-'.$contador2.' treegrid-parent-'.$contador3.'">';
+                    echo "<td>$piezas[nombre]</td>";
+                    echo "<td></td>";
+                    echo "<td>$piezas[fechaInicio]</td>";
+                    echo "<td>$piezas[fechaSalida]</td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "</tr>";
+
+                    $nom_piezas = $piezas[nombre];
+                    $var = 3;
+                    $sql_caracteristicas = $mysqli -> query("SELECT id, nombre, caracteristicas, medidas, fechaInicio, fechaSalida FROM piezas WHERE nombre = '$nom_piezas'");
+                    while($piezas2=mysqli_fetch_array($sql_caracteristicas)) {
+                        // if($contador2 == 2){
+                        //echo '<tr class="treegrid-'.$contador2.' treegrid-parent-'.$contador3.'"><td>Node 1-1</td><td>Additional info</td></tr>';
+                        echo '<tr class="treegrid-'.$var.' treegrid-parent-'.$contador2.'">';
+                        echo "<td>Caracteristicas:</td><td>$piezas2[caracteristicas]</td>";
+                        echo "<td></td>";
+                        echo "<td></td>";
+                        echo "<td></td>";
+                        echo "<td></td>";
+                        echo "<td></td>";
+                        echo "</tr>";
+
+                        echo '<tr class="treegrid-'.$var.' treegrid-parent-'.$contador2.'">';
+                        echo "<td>Medidas:</td><td>$piezas2[medidas]</td>";
+                        echo "<td></td>";
+                        echo "<td></td>";
+                        echo "<td></td>";
+                        echo "<td></td>";
+                        echo "<td></td>";
+                        echo "</tr>";
+                        $var = $var + 1;
+                    }
+                    $contador2 = $var + 1;
+                    //}
+                    //
+                }
+
+
+                $contador = $contador2 + 1;
+                $contador2 = $contador + 1;
+                $contador3 = $contador3 + 2;
+            }
+            
+            
+            
+            
+            
+            

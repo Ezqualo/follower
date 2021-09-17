@@ -1,0 +1,251 @@
+//switch (var_empresa) {
+            if(cadenaIngresada == 'BFGOODRICH') {
+                //alert('El kilogramo de naranjas cuesta $0.59.'); cliente_odt
+                <?php
+                $query = $mysqli->query("SELECT DISTINCT nombreCliente FROM clientes WHERE ejecutivasCliente like '%$userlogin%' AND empresaCliente = 'BFGOODRICH'");
+                while ($valores = mysqli_fetch_array($query)) {
+                    $clientes[] = $valores[nombreCliente];
+                }
+                ?>
+                document.getElementById("cliente_odt").innerHTML = "";
+                var list_clientes = <?php echo json_encode($clientes);?>;
+                var ddlItems = document.getElementById("cliente_odt"),
+                    itemArray = list_clientes;
+
+                for (var i = 0; i < itemArray.length; i++) {
+                    var opt = itemArray[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    ddlItems.appendChild(el);
+                }
+            }
+            case 'JOHNSON & JOHNSON':
+                //alert('El kilogramo de naranjas cuesta $0.59.'); cliente_odt
+                <?php
+                    $query = $mysqli->query("SELECT DISTINCT nombreCliente FROM clientes WHERE ejecutivasCliente like '%$userlogin%' AND empresaCliente = 'JOHNSON & JOHNSON'");
+                    while ($valores = mysqli_fetch_array($query)) {
+                        $clientes[] = $valores[nombreCliente];
+                    }
+                ?>
+                document.getElementById("cliente_odt").innerHTML = "";
+                var list_clientes1 = <?php echo json_encode($clientes);?>;
+                var ddlItems1 = document.getElementById("cliente_odt"),
+                    itemArray1 = list_clientes1;
+
+                for (var i = 0; i < itemArray1.length; i++) {
+                    var opt = itemArray1[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    ddlItems1.appendChild(el);
+                }
+                break;
+            case 'BRASKEM':
+                //alert('El kilogramo de naranjas cuesta $0.59.'); cliente_odt
+                <?php
+                    $query = $mysqli->query("SELECT DISTINCT nombreCliente FROM clientes WHERE ejecutivasCliente like '%$userlogin%' AND empresaCliente = 'BRASKEM'");
+                    while ($valores = mysqli_fetch_array($query)) {
+                        $clientes[] = $valores[nombreCliente];
+                    }
+                ?>
+                document.getElementById("cliente_odt").innerHTML = "";
+                var list_clientes = <?php echo json_encode($clientes);?>;
+                var ddlItems = document.getElementById("cliente_odt"),
+                    itemArray = list_clientes;
+
+                for (var i = 0; i < itemArray.length; i++) {
+                    var opt = itemArray[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    ddlItems.appendChild(el);
+                }
+                break;
+            case 'MICHELIN':
+                //alert('El kilogramo de naranjas cuesta $0.59.'); cliente_odt
+                <?php
+                $query = $mysqli->query("SELECT DISTINCT nombreCliente FROM clientes WHERE ejecutivasCliente like '%$userlogin%' AND empresaCliente = 'MICHELIN'");
+                while ($valores = mysqli_fetch_array($query)) {
+                    $clientes[] = $valores[nombreCliente];
+                }
+                ?>
+                document.getElementById("cliente_odt").innerHTML = "";
+                var list_clientes = <?php echo json_encode($clientes);?>;
+                var ddlItems = document.getElementById("cliente_odt"),
+                    itemArray = list_clientes;
+
+                for (var i = 0; i < itemArray.length; i++) {
+                    var opt = itemArray[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    ddlItems.appendChild(el);
+                }
+                break;
+            case 'UNIROYAL':
+                //alert('El kilogramo de naranjas cuesta $0.59.'); cliente_odt
+                <?php
+                $query = $mysqli->query("SELECT DISTINCT nombreCliente FROM clientes WHERE ejecutivasCliente like '%$userlogin%' AND empresaCliente = 'UNIROYAL'");
+                while ($valores = mysqli_fetch_array($query)) {
+                    $clientes[] = $valores[nombreCliente];
+                }
+                ?>
+                document.getElementById("cliente_odt").innerHTML = "";
+                var list_clientes = <?php echo json_encode($clientes);?>;
+                var ddlItems = document.getElementById("cliente_odt"),
+                    itemArray = list_clientes;
+
+                for (var i = 0; i < itemArray.length; i++) {
+                    var opt = itemArray[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    ddlItems.appendChild(el);
+                }
+                break;
+            case 'CARGILL':
+                //alert('El kilogramo de naranjas cuesta $0.59.'); cliente_odt
+                <?php
+                $query = $mysqli->query("SELECT DISTINCT nombreCliente FROM clientes WHERE ejecutivasCliente like '%$userlogin%' AND empresaCliente = 'CARGILL'");
+                while ($valores = mysqli_fetch_array($query)) {
+                    $clientes[] = $valores[nombreCliente];
+                }
+                ?>
+                document.getElementById("cliente_odt").innerHTML = "";
+                var list_clientes = <?php echo json_encode($clientes);?>;
+                var ddlItems = document.getElementById("cliente_odt"),
+                    itemArray = list_clientes;
+
+                for (var i = 0; i < itemArray.length; i++) {
+                    var opt = itemArray[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    ddlItems.appendChild(el);
+                }
+                break;
+            case 'BALMORAL':
+                //alert('El kilogramo de naranjas cuesta $0.59.'); cliente_odt
+                <?php
+                $query = $mysqli->query("SELECT DISTINCT nombreCliente FROM clientes WHERE ejecutivasCliente like '%$userlogin%' AND empresaCliente = 'BALMORAL'");
+                while ($valores = mysqli_fetch_array($query)) {
+                    $clientes[] = $valores[nombreCliente];
+                }
+                ?>
+                document.getElementById("cliente_odt").innerHTML = "";
+                var list_clientes = <?php echo json_encode($clientes);?>;
+                alert(list_clientes);
+                var ddlItems = document.getElementById("cliente_odt"),
+                    itemArray = list_clientes;
+
+                for (var i = 0; i < itemArray.length; i++) {
+                    var opt = itemArray[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    ddlItems.appendChild(el);
+                }
+                break;
+            case 'BANCOMER':
+                //alert('El kilogramo de naranjas cuesta $0.59.'); cliente_odt
+                <?php
+                $query = $mysqli->query("SELECT DISTINCT nombreCliente FROM clientes WHERE ejecutivasCliente like '%$userlogin%' AND empresaCliente = 'BANCOMER'");
+                while ($valores = mysqli_fetch_array($query)) {
+                    $clientes[] = $valores[nombreCliente];
+                }
+                ?>
+                document.getElementById("cliente_odt").innerHTML = "";
+                var list_clientes = <?php echo json_encode($clientes);?>;
+                var ddlItems = document.getElementById("cliente_odt"),
+                    itemArray = list_clientes;
+
+                for (var i = 0; i < itemArray.length; i++) {
+                    var opt = itemArray[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    ddlItems.appendChild(el);
+                }
+                break;
+            case 'EZQUALO':
+                //alert('El kilogramo de naranjas cuesta $0.59.'); cliente_odt
+                <?php
+                $query = $mysqli->query("SELECT DISTINCT nombreCliente FROM clientes WHERE ejecutivasCliente like '%$userlogin%' AND empresaCliente = 'EZQUALO'");
+                while ($valores = mysqli_fetch_array($query)) {
+                    $clientes[] = $valores[nombreCliente];
+                }
+                ?>
+                document.getElementById("cliente_odt").innerHTML = "";
+                var list_clientes = <?php echo json_encode($clientes);?>;
+                var ddlItems = document.getElementById("cliente_odt"),
+                    itemArray = list_clientes;
+
+                for (var i = 0; i < itemArray.length; i++) {
+                    var opt = itemArray[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    ddlItems.appendChild(el);
+                }
+                break;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+//codigo para crear nuevos select de areas y personas
+        var maxField = 20; //Input fields increment limitation
+        var addButton = $('.add_button'); //Add button selector
+        var wrapper = $('.field_wrapper'); //Input field wrapper
+        var wrapper2 = $('.field_wrapper2'); //Input field wrapper
+        var fieldHTML = '<span style="color: yellow;"> </span><label id="nom-campo"></label><select name="areas" id="areas" class="form-control" style="height:60px; height: 40px;"><option value="" disabled selected>--Seleccionar--</option></select>';
+        var fieldHTML2 = '<span style="color: yellow;"> </span><label id="nom-campo"></label><select class="form-control" style="height:60px; height: 40px;" name="personas" id="personas"><option value="" disabled selected>--Seleccionar--</option></select>';
+        var x = 1; //Initial field counter is 1
+
+        /*var span = $('<span>').prop('style','color: yellow;');
+        var label = $('<label>') .prop('id','nom-campo');
+
+        var select = $('<select>').prop('id', 'areas1')
+            .prop('name', 'areas1')
+            .prop('class','form-control')
+            .prop('style','height:60px; height: 40px;');
+
+        //$('#container').append(span).append(label).append(select);
+        //var fieldHTML = select;
+        $(areas_a_select).each(function() {
+            fieldHTML.append($("<option>")
+                .prop('value', this)
+                .text(this.charAt(0).toUpperCase() + this.slice(1)));
+        });
+        var br = $("<br>");
+        $(fieldHTML).append(span).append(label).append(select).append(br);*/
+
+        //Once add button is clicked
+        $(addButton).click(function(){
+            //Check maximum number of input fields
+            if(x < maxField){
+                x++; //Increment field counter
+                $(wrapper).append(fieldHTML); //Add field html
+                $(wrapper2).append(fieldHTML2); //Add field html
+                //$(wrapper2).append(fieldHTML3); //Add field html
+            }
+        });
+
+        //Once remove button is clicked
+        $(wrapper2).on('click', '.remove_button', function(e){
+            e.preventDefault();
+            $(this).parent('div').remove(); //Remove field html
+            x--; //Decrement field counter
+        });
+        //Once remove button is clicked
+        $(wrapper).on('click', '.remove_button', function(e){
+            e.preventDefault();
+            $(this).parent('div').remove(); //Remove field html
+            x--; //Decrement field counter
+        });

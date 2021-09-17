@@ -1,0 +1,230 @@
+/*******************/
+/***** Estilos *****/
+/*******************/
+
+
+/* Login */
+#fondo1 {
+	margin: 0;
+	padding: 0;
+	background-image: url("../img/portada.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+/* Inicio */
+#fondo {
+	margin: 0;
+	padding: 0;
+	background-color: #000000;
+}
+
+/* Formulario */
+#login .container #login-row #login-column #login-box {
+	margin-top: 380px;
+	max-width: 300px;
+	height: 200px;
+	border-radius: 3px;
+	padding-bottom: 1rem;
+	background-color: transparent;
+}
+
+.dropdown:hover>.dropdown-menu {
+	display: block;
+  }
+  
+.dropdown>.dropdown-toggle:active {
+/*Without this, clicking will make it sticky*/
+	pointer-events: none;
+	max-width: 100%;
+}
+  
+#background{
+	background-color: #000000;
+}
+
+.dropdown:hover>.dropdown-menu {
+	display: block;
+	max-width: 100%;
+  }
+  
+  .dropdown>.dropdown-toggle:active {
+	/*Without this, clicking will make it sticky*/
+	  pointer-events: none;
+	  max-width: 100%;
+  }
+  
+.navbar-brand {
+    max-width: 50%;
+}
+
+.navbar{
+	background-color: #000000;
+}
+
+.btn {
+	color: #fdbe0f;
+	background-color: black;
+	border-color: #fdbe0f;
+	border-radius: 1.5rem;
+}
+
+.btn:hover {
+	color: #000000;
+	background-color: #fdbe0f;
+	border-color: #fdbe0f;
+	border-radius: 1.5rem;
+}
+
+/* Estilos Sweet Alert */
+
+.swal2-popup {
+	background-color: #febe10;
+}
+
+.swal2-styled.swal2-confirm button {
+	background-color: #fdbe0f;
+}
+
+/* estilos de mensaje de bienvenida */
+.jumbotron{
+	background-color: #000000;
+}
+
+.text-center{ 
+	color: #ffffff; 
+	font-family: FranklinGothic;
+}
+
+.badge{ 
+	background-color: #fdbe0f;
+	color: #000000
+}
+
+.barra_amarilla{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.container-images {
+	position: relative;
+}
+
+.botonOdt:hover{
+	background-image: url("../img/btnodt_amarillo.png");
+}
+
+/* estilos de menu fijo y menu despegable */
+.spacer
+{
+	margin-top: 0px;
+}
+
+
+/* Boton de subir archivos */
+
+#custom-button {
+	padding: 10px;
+	color: #ffffff;
+	background-color: #febe10;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	cursor: pointer;
+
+}
+
+#custom-button:hover {
+	background-color: #febe10;
+}
+
+#custom-text {
+	margin-left: 10px;
+	font-family: sans-serif;
+	color: #aaaaaa;
+}
+.modal{
+	color: black;
+}
+.modal-header {
+	background-color: #febe10;
+}
+
+.modal-body .btn {
+	color: #000000;
+	background-color: #febe10;
+}
+
+
+
+/* Media Queries (Breakpoints) */
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575px) { 
+	#login .container #login-row #login-column #login-box {
+		margin-top: 400px;
+	}
+ }
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767px) { 
+	#login .container #login-row #login-column #login-box {
+		margin-top: 200px;
+		margin-left: 260px;
+	}
+ }
+
+/* Small devices (landscape phones, 812px and up)*/
+@media (min-width: 812px) { 
+	#login .container #login-row #login-column #login-box {
+		margin-top: 200px;
+		margin-left: 360px;
+	}
+
+	#columna-espacio {
+		max-width: 0px;
+	}
+ }
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 811px) { 
+	#login .container #login-row #login-column #login-box {
+		margin-top: 780px;
+	}
+
+	#columna-espacio {
+		max-width: 0px;
+	}
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199px) { 
+	#login .container #login-row #login-column #login-box {
+		margin-top: 480px;
+		margin-left: 520px;
+	}
+ }
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) and (max-width: 1199px) { 
+	#login .container #login-row #login-column #login-box {
+		margin-top: 680px;
+		margin-left: 680px;
+	}
+ }
+
+ /* Extra large devices (large desktops, 1280px and up)*/
+@media (min-width: 1280px) and (max-width: 1919px) { 
+	#login .container #login-row #login-column #login-box {
+		margin-top: 500px;
+		margin-left: 680px;
+	}
+ }
+
+  /* Extra large devices (large desktops, 1280px and up)*/
+@media (min-width: 1920px) { 
+	#login .container #login-row #login-column #login-box {
+		margin-top: 600px;
+		margin-left: 680px;
+	}
+ }
